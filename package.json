@@ -1,0 +1,32 @@
+{
+  "name": "arg.js",
+  "version": "1.0.0",
+  "description": "Utility functions for Argentina-related stuff (banks, IDs, phones, etc.)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miparnisari/arg.js.git"
+  },
+  "keywords": [
+    "argentina", "cbu", "cuit", "phone"
+  ],
+  "author": "maria ines parnisari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miparnisari/arg.js/issues"
+  },
+  "homepage": "https://github.com/miparnisari/arg.js#readme",
+  "dependencies": {
+    "google-libphonenumber": "^1.0.18",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.5.2"
+  },
+  "devDependencies": {
+    "gulp-jsdoc3": "^0.2.1",
+    "jsdoc": "^3.4.0",
+    "should": "^8.3.1"
+  }
+}
