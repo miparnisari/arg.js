@@ -1,13 +1,14 @@
 arg.js
 ===
 
+![build-status](https://travis-ci.org/miparnisari/arg.js.svg?branch=master)
+
 Utility functions for Argentina-related stuff (banks, IDs, phones, etc.)
 
 ## Installation:
 
 1. Install nodejs (https://nodejs.org/en/download/).
-1. Run `npm install -g gulp`.
-1. Run `npm install`.
+1. Run `npm install --save arg.js`.
 
 ## Build & tests & documentation
 
@@ -18,6 +19,6 @@ Utility functions for Argentina-related stuff (banks, IDs, phones, etc.)
 ## Usage
 
   ```javascript
-  var cbu = require('./src/cbu');
+  var cbu = require('arg.js').cbu;
   var valid = cbu.isValid('123'); // false
   ```
