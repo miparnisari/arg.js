@@ -6,6 +6,9 @@
   "directories": {
     "test": "test"
   },
+  "scripts": {
+    "test": "gulp test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/miparnisari/arg.js.git"
