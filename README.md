@@ -1,7 +1,10 @@
 arg.js
 ===
 
+![npm-version](https://img.shields.io/npm/v/arg.js.svg)
 ![build-status](https://travis-ci.org/miparnisari/arg.js.svg?branch=master)
+![download-count](https://img.shields.io/npm/dm/arg.js.svg)
+![dev-deps](https://david-dm.org/miparnisari/arg.js.svg)
 
 Utility functions for Argentina-related stuff (banks, IDs, phones, etc.)
 

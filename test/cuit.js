@@ -23,6 +23,7 @@ describe('CUIT / CUIL', function() {
   it("has correct checksum", function(done) {
     cuit._checksumIsOk('27361705031').should.be.exactly(false); //invalid checksum
     cuit._checksumIsOk('27361705039').should.be.exactly(true);
+    //TODO add test for cbu with second verifying digit equal to 0
     done();
   });
 
