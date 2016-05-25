@@ -12,15 +12,18 @@ var _checksumIsOk = function(sCUIT) {
     var sCUIT = String(sCUIT);
     var aCUIT = sCUIT.split('');
 
-    var aMult = [6,7,8,9,4,5,6,7,8,9];
+    var aMult = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2];
     var sum = 0;
     for (var i = 0; i <= 9; i++) {
         sum += aCUIT[i] * aMult[i];
     }
-    sum = (sum % 11);
 
+    var diff = 11 - (sum % 11);
     var checksum = aCUIT[10];
-    return (sum == checksum);
+
+    if (diff == 11) diff = 0; // do not consider diff == 10
+
+    return (diff == checksum);
 }
 
 /**
