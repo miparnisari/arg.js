@@ -10,7 +10,7 @@ var _isValidAccount = function(acc) {
     var sum = acc[0] * 3 + acc[1] * 9 + acc[2] * 7 + acc[3] * 1 + acc[4] * 3 + acc[5] * 9 + acc[6] * 7 + acc[7] * 1 + acc[8] * 3 + acc[9] * 9 + acc[10] * 7 + acc[11] * 1 + acc[12] * 3;
     var diff = (10 - (sum % 10)) % 10; // the result of this should be only 1 digit
     var checksum = acc[13];
-    
+
     return diff == checksum;
 };
 
@@ -74,7 +74,7 @@ var getAssociatedBank = function(cbu) {
     case 79: return  'Banco Regional de Cuyo';
     case 83: return  'Banco del Chubut';
     case 86: return  'Banco de Santa Cruz';
-    case 93: return  'Banco de la Pampa';
+    case 93: return  'Banco de La Pampa';
     case 94: return  'Banco de Corrientes';
     case 97: return  'Banco Provincia del Neuquén';
     case 147: return 'Banco BI Creditanstalt';
