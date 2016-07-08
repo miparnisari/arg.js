@@ -23,8 +23,8 @@ describe('CBU', function() {
   });
 
   it("has associated bank", function(done) {
-    cbu.getAssociatedBank('2850590940090418135201').should.be.exactly('Banco Macro');
-    cbu.getAssociatedBank('0050590940090418135201').should.be.exactly('ABN AMRO Bank');
+    cbu.getAssociatedBank('2850590940090418135201').should.be.exactly('Banco Macro S.A.');
+    cbu.getAssociatedBank('0050590940090418135201').should.be.exactly('The Royal Bank of Scotland N.V.');
     should(function(){cbu.getAssociatedBank('9990590940090418135201')} ).throw(); //Bank does not exist
     done();
   });
