@@ -25,6 +25,6 @@ Utility functions for Argentina-related stuff (banks, IDs, phones, etc.)
   var cbu = require('arg.js').cbu;
   var valid = cbu.isValid('123'); // false
 
-  var doc = require('arg.js).document;
+  var doc = require('arg.js').document;
   var validDni = doc.isValidDni('36111222'); //true
   ```
