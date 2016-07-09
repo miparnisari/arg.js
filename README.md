@@ -8,7 +8,7 @@ arg.js
 
 Utility functions for Argentina-related stuff (banks, IDs, phones, etc.)
 
-## Installation:
+## Installation
 
 1. Install nodejs (https://nodejs.org/en/download/).
 1. Run `npm install --save arg.js`.
@@ -24,4 +24,7 @@ Utility functions for Argentina-related stuff (banks, IDs, phones, etc.)
   ```javascript
   var cbu = require('arg.js').cbu;
   var valid = cbu.isValid('123'); // false
+
+  var doc = require('arg.js).document;
+  var validDni = doc.isValidDni('36111222'); //true
   ```
