@@ -1,6 +1,6 @@
 {
   "name": "arg.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Utility functions for Argentina-related stuff (banks, IDs, phones, etc.)",
   "main": "index.js",
   "directories": {
