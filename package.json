@@ -28,7 +28,7 @@
   "dependencies": {
     "google-libphonenumber": "^2.0.2",
     "gulp": "^3.9.1",
-    "gulp-shell": "^0.5.2"
+    "gulp-shell": "^0.6.3"
   },
   "devDependencies": {
     "gulp-jsdoc3": "^1.0.0",
