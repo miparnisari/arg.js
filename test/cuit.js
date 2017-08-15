@@ -27,6 +27,11 @@ describe('CUIT / CUIL', function() {
     done();
   });
 
+  it("should not throw error with letters", function(done) {
+    cuit.isValid("2736d7d5039").should.be.exactly(false);
+    done();
+  });
+
   it("is valid overall", function(done) {
     cuit.isValid("111111111").should.be.exactly(false); //invalid length
     cuit.isValid("11111111112").should.be.exactly(false); //invalid type

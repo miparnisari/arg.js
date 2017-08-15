@@ -1,3 +1,16 @@
+var isNumberRegex = /^\d+$/;
+
+/**
+ * @module document
+ * Returns whether a string is only numbers
+ * @param {string} str value to be evaluated.
+ * @returns {boolean} isValid
+ * @private
+ */
+var _isOnlyNumbers = function (str) {
+  return isNumberRegex.test(str);
+};
+
 /**
  * @module document
  * Returns whether a DNI (Documento Nacional de Identidad) is valid.
@@ -6,7 +19,7 @@
  */
 var isValidDni = function (dni) {
   var dniString = dni.toString();
-  return (dniString.length >= 7 && dniString.length <= 8);
+  return dniString.length >= 7 && dniString.length <= 8 && _isOnlyNumbers(dniString);
 };
 
 /**

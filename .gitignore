@@ -1,3 +1,6 @@
+# hidden folders
+**/.*/
+
 # Logs
 logs
 *.log

@@ -33,6 +33,7 @@
   "devDependencies": {
     "gulp-jsdoc3": "^1.0.0",
     "jsdoc": "^3.4.0",
+    "mocha": "^3.4.2",
     "should": "^11.1.0"
   }
 }
