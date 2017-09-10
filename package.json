@@ -26,12 +26,12 @@
   },
   "homepage": "https://github.com/miparnisari/arg.js#readme",
   "dependencies": {
-    "google-libphonenumber": "^2.0.2",
-    "gulp": "^3.9.1",
-    "gulp-shell": "^0.6.0"
+    "google-libphonenumber": "^2.0.19"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-jsdoc3": "^1.0.0",
+    "gulp-mocha": "^4.3.1",
     "jsdoc": "^3.4.0",
     "mocha": "^3.4.2",
     "should": "^13.0.1"
