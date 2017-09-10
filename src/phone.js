@@ -1,50 +1,49 @@
+/**
+ * @module phone
+ */
+
 var phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance();
 var PNF = require('google-libphonenumber').PhoneNumberFormat;
 
 /**
- * @module phone
- * Cleans a phone number
- * @example returns +5491156623011 or returns false when invalid number
- * @param {string} target phone number
- * @param {string} country code
- * @param {string} user phone number
- * @returns {string|boolean} Cleaned phone number or 'false' when invalid number
+ * @description Cleans a phone number
+ * @example returns +5491156623011 for 1556623011
+ * @param {string} targetPhone phone number
+ * @param {string} areaCode area code, default is 11
+ * @returns {string} Cleaned phone number
  */
-var clean = function(targetPhone, defaultCountry, userPhone) {
-  defaultCountry = defaultCountry || 'AR';
-  userPhone = userPhone || '+5491156623011';
+var clean = function (targetPhone, areaCode) {
+  defaultCountry = 'AR';
+  areaCode = areaCode || '11';
 
-  var valid;
   var tel;
-  try{
+  try {
     tel = phoneUtil.parse(targetPhone, defaultCountry);
-    if (tel.getCountryCode() == '54'){
+    if (tel.getCountryCode() == '54') {
       var national = tel.getNationalNumber().toString();
-      //no area code, extract from user
+      console.log("National: " + national)
       if (national.length < 10) {
-        if (userPhone) {
-          var mix = userPhone.substr(0, userPhone.length - national.length) + national;
-          return clean(mix, 'AR');
+        if (areaCode) {
+          return clean(areaCode + national, 'AR');
         }
         else
-          return false;
+          throw "Unkown area code for " + targetPhone
       }
-      else if (national[0] != '9'){
-        return clean('+549'+national, 'AR');
+      else if (national[0] != '9') {
+        return clean('+549' + national, 'AR');
       }
     }
   }
-  catch(e2){
-    console.log('can\'t parse number:'+targetPhone + e2);
-    return false;
+  catch (e) {
+    throw "Can't parse number " + targetPhone + ": " + e
   }
 
-  if(tel){
-    var p = phoneUtil.format(tel, PNF.E164);
-    return p
+  if (tel) {
+    return phoneUtil.format(tel, PNF.E164);
   }
-  else
-    return false;
+  else {
+    throw "Unkown error."
+  }
 };
 
 module.exports = {
