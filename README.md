@@ -30,7 +30,7 @@ This is a JavaScript library that provides utility functions to do validations o
 
   // Phones will be returned with the country and area code
   var phones = require('arg.js').phone;
-  var cleanPhone = phones.clean('56623011'); //+5491156623011
+  var cleanPhone = phones.clean('1556623011', '11'); //+5491156623011
   ```
 
 ## Build & tests & documentation
