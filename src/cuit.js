@@ -1,4 +1,8 @@
-var _isLengthOk = function(cuit) {
+/**
+ * @module cuit
+ */
+
+ var _isLengthOk = function(cuit) {
     return (cuit.length == 11);
 };
 
@@ -27,8 +31,7 @@ var _checksumIsOk = function(sCUIT) {
 }
 
 /**
- * @module cuit
- * Returns whether a given CUIT or CUIL is valid
+ * @description Returns whether a given CUIT or CUIL is valid
  * @param {string} cuit
  * @returns {boolean} isValid
  */

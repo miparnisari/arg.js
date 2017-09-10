@@ -1,4 +1,8 @@
-var _isLengthOk = function(cbu) {
+/**
+ * @module cbu
+ */
+
+ var _isLengthOk = function(cbu) {
     return (cbu.length == 22);
 };
 
@@ -30,8 +34,7 @@ var _isValidBankCode = function(code) {
 };
 
 /**
- * @module cbu
- * Returns whether a CBU is valid.
+ * @description Returns whether a CBU is valid.
  * @param {string} cbu
  * @returns {boolean} isValid
  */
@@ -42,8 +45,7 @@ var isValid = function(cbu) {
 };
 
 /**
- * @module cbu
- * Returns the name of the bank associated to a given CBU.
+ * @description Returns the name of the bank associated to a given CBU.
  * @param {string} cbu
  * @returns {string} name of the bank
  * @throws Will throw if the code is not associated to a bank
@@ -147,8 +149,7 @@ var getAssociatedBank = function(cbu) {
 }
 
 /**
- * @module cbu
- * Returns the bank's branch associated to a given CBU.
+ * @description Returns the bank's branch associated to a given CBU.
  * @param {string} cbu
  * @returns {string} branch
  */
@@ -157,8 +158,7 @@ var getBranch = function(cbu) {
 };
 
 /**
- * @module cbu
- * Returns the bank's code associated to a given CBU.
+ * @description Returns the bank's code associated to a given CBU.
  * @param {string} cbu
  * @returns {int} bank code
  */

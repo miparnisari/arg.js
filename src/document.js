@@ -1,8 +1,11 @@
+/**
+ * @module document
+ */
+
 var isNumberRegex = /^\d+$/;
 
 /**
- * @module document
- * Returns whether a string is only numbers
+ * @description Returns whether a string is only numbers
  * @param {string} str value to be evaluated.
  * @returns {boolean} isValid
  * @private
@@ -12,8 +15,7 @@ var _isOnlyNumbers = function (str) {
 };
 
 /**
- * @module document
- * Returns whether a DNI (Documento Nacional de Identidad) is valid.
+ * @description Returns whether a DNI (Documento Nacional de Identidad) is valid.
  * @param {string} dni
  * @returns {boolean} isValid
  */
@@ -23,8 +25,7 @@ var isValidDni = function (dni) {
 };
 
 /**
- * @module document
- * Returns whether a CI (Cedula de Identidad) is valid.
+ * @description Returns whether a CI (Cedula de Identidad) is valid.
  * @param {string} ci
  * @returns {boolean} isValid
  */
@@ -34,8 +35,7 @@ var isValidCi = function (ci) {
 };
 
 /**
- * @module document
- * Returns whether a lc (Licencia de Conducir) is valid.
+ * @description Returns whether a lc (Licencia de Conducir) is valid.
  * @param {string} lc
  * @returns {boolean} isValid
  */
@@ -45,8 +45,7 @@ var isValidLc = function (lc) {
 };
 
 /**
- * @module document
- * Returns whether a LE (Libreta de Enrolamiento) is valid.
+ * @description Returns whether a LE (Libreta de Enrolamiento) is valid.
  * @param {string} le
  * @returns {boolean} isValid
  */
