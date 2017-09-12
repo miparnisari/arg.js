@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/miparnisari/arg.js#readme",
   "dependencies": {
-    "google-libphonenumber": "^2.0.19"
+    "google-libphonenumber": "^3.0.4"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
