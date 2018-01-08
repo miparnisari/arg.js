@@ -17,6 +17,7 @@
     "argentina",
     "cbu",
     "cuit",
+    "dni",
     "phone"
   ],
   "author": "maria ines parnisari",
@@ -32,8 +33,8 @@
     "gulp": "^3.9.1",
     "gulp-jsdoc3": "^1.0.0",
     "gulp-mocha": "^4.3.1",
-    "jsdoc": "^3.4.0",
+    "jsdoc": "^3.5.5",
     "mocha": "^4.0.0",
-    "should": "^13.0.1"
+    "should": "^13.2.0"
   }
 }
