@@ -13,7 +13,7 @@ var PNF = require('google-libphonenumber').PhoneNumberFormat;
  * @returns {string} Cleaned phone number
  */
 var clean = function (targetPhone, areaCode) {
-  defaultCountry = 'AR';
+  var defaultCountry = 'AR';
   areaCode = areaCode || '11';
 
   var tel;
@@ -21,28 +21,27 @@ var clean = function (targetPhone, areaCode) {
     tel = phoneUtil.parse(targetPhone, defaultCountry);
     if (tel.getCountryCode() == '54') {
       var national = tel.getNationalNumber().toString();
-      console.log("National: " + national)
       if (national.length < 10) {
         if (areaCode) {
           return clean(areaCode + national, 'AR');
         }
         else
-          throw "Unkown area code for " + targetPhone
+          throw "Unknown area code for " + targetPhone;
       }
       else if (national[0] != '9') {
         return clean('+549' + national, 'AR');
       }
     }
   }
-  catch (e) {
-    throw "Can't parse number " + targetPhone + ": " + e
+  catch (error) {
+    throw "Can't parse number " + targetPhone + ": " + error;
   }
 
   if (tel) {
     return phoneUtil.format(tel, PNF.E164);
   }
   else {
-    throw "Unkown error."
+    throw "Unknown error."
   }
 };
 
