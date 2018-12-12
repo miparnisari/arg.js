@@ -39,6 +39,7 @@ var _isValidBankCode = function(code) {
  * @returns {boolean} isValid
  */
 var isValid = function(cbu) {
+    if (!cbu || !cbu.substr) return false;
     var bankCode = cbu.substr(0, 8);
     var accountCode = cbu.substr(8, 14);
     return _isLengthOk(cbu) && _isValidBankCode(bankCode) && _isValidAccount(accountCode);
