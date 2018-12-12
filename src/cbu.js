@@ -3,11 +3,11 @@
  */
 
  var _isLengthOk = function(cbu) {
-    return (cbu.length == 22);
+    return (cbu && cbu.length == 22);
 };
 
 var _isValidAccount = function(acc) {
-    if (acc.length !== 14) {
+    if (!acc || acc.length !== 14) {
         return false;
     }
 
@@ -19,7 +19,7 @@ var _isValidAccount = function(acc) {
 };
 
 var _isValidBankCode = function(code) {
-    if (code.length !== 8) {
+    if (!code || code.length !== 8) {
         return false;
     }
     var bank = code.substr(0, 3);
@@ -52,6 +52,7 @@ var isValid = function(cbu) {
  * @throws Will throw if the code is not associated to a bank
  */
 var getAssociatedBank = function(cbu) {
+  if (!cbu) throw new Error('No CBU provided');
   // Info: http://www.afip.gov.ar/genericos/emisorasGarantias/formularioCompa%C3%B1ias.asp?completo=1&ent=3
   // More info
     // http://www.bcra.gov.ar/pdfs/comytexord/B10290.pdf
@@ -155,6 +156,7 @@ var getAssociatedBank = function(cbu) {
  * @returns {string} branch
  */
 var getBranch = function(cbu) {
+  if (!cbu) throw new Error('No CBU provided')
   return cbu.substr(4, 3);
 };
 
@@ -164,6 +166,7 @@ var getBranch = function(cbu) {
  * @returns {int} bank code
  */
 var getBankCode = function(cbu) {
+  if (!cbu) throw new Error('No CBU provided')
   return parseInt(cbu.substr(0, 3), 10);
 }
 

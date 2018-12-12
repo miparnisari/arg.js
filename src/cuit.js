@@ -3,16 +3,18 @@
  */
 
  var _isLengthOk = function(cuit) {
-    return (cuit.length == 11);
+    return (cuit && cuit.length == 11);
 };
 
 var _isTypeOk = function(cuit) {
+  if (!cuit || !cuit.substr) return false
   var code = parseInt(cuit.substr(0, 2), 10);
   var validTypes = [20, 23, 24, 27, 30, 33, 34];
   return validTypes.indexOf(code) > -1;
 };
 
 var _checksumIsOk = function(sCUIT) {
+    if (!sCUIT) return false
     var sCUIT = String(sCUIT);
     var aCUIT = sCUIT.split('');
 
