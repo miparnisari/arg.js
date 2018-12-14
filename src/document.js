@@ -11,6 +11,7 @@ var isNumberRegex = /^\d+$/;
  * @private
  */
 var _isOnlyNumbers = function (str) {
+  if (!str) return false;
   return isNumberRegex.test(str);
 };
 
@@ -20,6 +21,7 @@ var _isOnlyNumbers = function (str) {
  * @returns {boolean} isValid
  */
 var isValidDni = function (dni) {
+  if (!dni) return false;
   var dniString = dni.toString();
   return dniString.length >= 7 && dniString.length <= 8 && _isOnlyNumbers(dniString);
 };
@@ -30,6 +32,7 @@ var isValidDni = function (dni) {
  * @returns {boolean} isValid
  */
 var isValidCi = function (ci) {
+  if (!ci) return false;
   var ciString = ci.toString();
   return (ciString.length >= 1 && ciString.length <= 9);
 };
@@ -40,6 +43,7 @@ var isValidCi = function (ci) {
  * @returns {boolean} isValid
  */
 var isValidLc = function (lc) {
+  if (!lc) return false;
   var lcString = lc.toString();
   return (lcString.length >= 6 && lcString.length <= 7);
 };
@@ -50,6 +54,7 @@ var isValidLc = function (lc) {
  * @returns {boolean} isValid
  */
 var isValidLe = function (le) {
+  if (!le) return false;
   var leString = le.toString();
   return (leString.length >= 6 && leString.length <= 7);
 };
