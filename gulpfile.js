@@ -2,11 +2,14 @@ var gulp = require('gulp');
 var mocha = require('gulp-mocha');
 var jsdoc = require('gulp-jsdoc3');
 
-gulp.task('test', function() {
-  gulp.src(['./test/**/*.js'], {read: false})
+gulp.task('test', function(done) {
+    gulp.src(['./test/**/*.js'], {read: false})
         .pipe(mocha({reporter: 'spec'}))
-})
-gulp.task('doc', function (cb) {
+    done();
+});
+  
+gulp.task('doc', function (done) {
     gulp.src(['./src/**/*.js'], {read: false})
-        .pipe(jsdoc(cb));
+        .pipe(jsdoc());
+    done();
 });
