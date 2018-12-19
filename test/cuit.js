@@ -24,8 +24,22 @@ describe('CUIT / CUIL', function() {
     //TODO add test for cbu with second verifying digit equal to 0
   });
 
-  it("should not throw error with letters", function() {
+  it("should not throw an error with letters", function() {
     cuit.isValid("2736d7d5039").should.be.exactly(false);
+  });
+
+  it("should not throw an error with a nullish value", function() {
+    cuit.isValid().should.be.exactly(false);
+    cuit.isValid(undefined).should.be.exactly(false);
+    cuit.isValid(null).should.be.exactly(false);
+  });
+
+  it("should not throw an error with an empty string", function() {
+    cuit.isValid('').should.be.exactly(false);
+  });
+
+  it("should not throw an error with NaN", function() {
+    cuit.isValid(NaN).should.be.exactly(false);
   });
 
   it("is valid overall", function() {
