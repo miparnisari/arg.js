@@ -3,7 +3,7 @@
  */
 
  var _isLengthOk = function(cuit) {
-    return (cuit && cuit.length == 11);
+    return (!!cuit && cuit.length == 11);
 };
 
 var _isTypeOk = function(cuit) {
