@@ -53,17 +53,15 @@ var isValid = function(cbu) {
  */
 var getAssociatedBank = function(cbu) {
   if (!cbu) throw new Error('No CBU provided');
-  // Info: http://www.afip.gov.ar/genericos/emisorasGarantias/formularioCompa%C3%B1ias.asp?completo=1&ent=3
-  // More info
-    // http://www.bcra.gov.ar/pdfs/comytexord/B10290.pdf
-    // http://www.santanderrio.com.ar/corporativas/ayuda_rs/archivos/bancos_cci.pdf
+  // Info: http://www.afip.gob.ar/aplicativos/
+    // > Ganancias Personas Jurídicas - Sociedades > Versión 16.0 Release 1 > Tablas del sistema > Bancos (See list)
   var code = parseInt(cbu.substr(0, 3), 10);
   switch(code) {
     case 5: return   'The Royal Bank of Scotland N.V.';
     case 7: return   'Banco de Galicia y Buenos Aires S.A.';
     case 11: return  'Banco de la Nación Argentina';
     case 14: return  'Banco de la Provincia de Buenos Aires';
-    case 15: return  'Industrial and Commercial Bank of China (Argentina) S.A.';
+    case 15: return  'Standard Bank Argentina S.A.';
     case 16: return  'Citibank N.A.';
     case 17: return  'BBVA Banco Francés S.A.';
     case 18: return  'The Bank of Tokyo-Mitsubishi UFJ, LTD.';
@@ -77,13 +75,13 @@ var getAssociatedBank = function(cbu) {
     case 46: return  'Banco do Brasil S.A.';
     case 60: return  'Banco de Tucumán S.A.';
     case 65: return  'Banco Municipal de Rosario';
-    case 72: return  'Banco Santander Rio S.A.';
+    case 72: return  'Banco Santander Río S.A.';
     case 83: return  'Banco del Chubut S.A.';
     case 86: return  'Banco de Santa Cruz S.A.';
     case 93: return  'Banco de la Pampa Sociedad de Economía Mixta';
     case 94: return  'Banco de Corrientes S.A.';
     case 97: return  'Banco Provincia del Neuquén S.A.';
-    case 147: return 'Banco Interfinanzas S.A.';
+    case 143: return 'Banco Interfinanzas S.A.';
     case 150: return 'HSBC Bank Argentina S.A.';
     case 165: return 'JP Morgan Chase Bank NA (Sucursal Buenos Aires)';
     case 191: return 'Banco Credicoop Cooperativo Limitado';
@@ -102,12 +100,11 @@ var getAssociatedBank = function(cbu) {
     case 299: return 'Banco Comafi S.A.';
     case 300: return 'Banco de Inversión y Comercio Exterior S.A.';
     case 301: return 'Banco Piano S.A.';
-    case 303: return 'Banco Finansur S.A.';
     case 305: return 'Banco Julio S.A.';
     case 309: return 'Nuevo Banco de la Rioja S.A.';
     case 310: return 'Banco del Sol S.A.';
     case 311: return 'Nuevo Banco del Chaco S.A.';
-    case 312: return 'BANCO VOII S.A.';
+    case 312: return 'MBA Lazard Banco de Inversiones S.A.';
     case 315: return 'Banco de Formosa S.A.';
     case 319: return 'Banco CMF S.A.';
     case 321: return 'Banco de Santiago del Estero S.A.';
@@ -123,28 +120,26 @@ var getAssociatedBank = function(cbu) {
     case 341: return 'Más Ventas S.A.';
     case 386: return 'Nuevo Banco de Entre Ríos S.A.';
     case 389: return 'Banco Columbia S.A.';
-    case 405: return 'Ford Credit CIA. Finan. S.A.';
+    case 405: return 'Ford Credit Compañía Financiera S.A.';
     case 406: return 'Metrópolis Compañía Financiera S.A.';
     case 408: return 'Compañía Financiera Argentina S.A.';
-    case 413: return 'Montemar CIA. Finan. S.A.';
-    case 415: return 'Multifinanzas CIA. Finan. S.A.';
-    case 426: return 'Banco Bica S.A.';
+    case 413: return 'Montemar Compañía Financiera S.A.';
+    case 415: return 'Multifinanzas Compañía Financiera S.A.';
     case 428: return 'Caja de Crédito Coop. La Capital del Plata LTDA.';
     case 431: return 'Banco Coinag S.A.';
     case 432: return 'Banco de Comercio S.A.';
     case 434: return 'Caja de Crédito Cuenca Coop. LTDA.';
     case 437: return 'Volkswagen Credit Compañía Financiera S.A.';
     case 438: return 'Cordial Compañía Financiera S.A.';
-    case 440: return 'FCA Compañía Financiera S.A.';
+    case 440: return 'Fiat Crédito Compañía Financiera S.A.';
     case 441: return 'GPAT Compañía Financiera S.A.';
     case 442: return 'Mercedes-Benz Compañía Financiera Argentina S.A.';
-    case 443: return 'Rombo CIA. Finan. S.A.';
-    case 444: return 'John Deere Credit CIA. Finan. S.A.';
-    case 445: return 'PSA Finance Argentina CIA. Finan. S.A.';
+    case 443: return 'Rombo Compañía Financiera S.A.';
+    case 444: return 'John Deere Credit Compañía Financiera S.A.';
+    case 445: return 'PSA Finance Argentina Compañía Financiera S.A.';
     case 446: return 'Toyota Compañía Financiera de Argentina S.A.';
     case 448: return 'Finandino Compañía Financiera S.A.';
-    case 992: return 'Provincanje Sociedad Anónima';
-    case 993: return 'AFIP Seti DJ';
+    case 992: return 'Provincanje S.A.';
   }
 
   throw new Error('Code not associated to any bank: ' + code);
