@@ -53,6 +53,7 @@ var isValid = function(cbu) {
  */
 var getAssociatedBank = function(cbu) {
   if (!cbu) throw new Error('No CBU provided');
+  if (!isValid(cbu)) throw new Error('CBU is not valid');
   // Info: http://www.afip.gob.ar/aplicativos/
     // > Ganancias Personas Jurídicas - Sociedades > Versión 16.0 Release 1 > Tablas del sistema > Bancos (See list)
   var code = parseInt(cbu.substr(0, 3), 10);
@@ -154,6 +155,7 @@ var getAssociatedBank = function(cbu) {
  */
 var getBranch = function(cbu) {
   if (!cbu) throw new Error('No CBU provided')
+  if (!isValid(cbu)) throw new Error('CBU is not valid');
   return cbu.substr(4, 3);
 };
 
@@ -164,6 +166,7 @@ var getBranch = function(cbu) {
  */
 var getBankCode = function(cbu) {
   if (!cbu) throw new Error('No CBU provided')
+  if (!isValid(cbu)) throw new Error('CBU is not valid');
   return parseInt(cbu.substr(0, 3), 10);
 }
 
