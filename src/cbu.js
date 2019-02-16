@@ -61,7 +61,7 @@ var getAssociatedBank = function(cbu) {
     case 7: return   'Banco de Galicia y Buenos Aires S.A.';
     case 11: return  'Banco de la Nación Argentina';
     case 14: return  'Banco de la Provincia de Buenos Aires';
-    case 15: return  'Standard Bank Argentina S.A.';
+    case 15: return  'Industrial and Comercial Bank of China';
     case 16: return  'Citibank N.A.';
     case 17: return  'BBVA Banco Francés S.A.';
     case 18: return  'The Bank of Tokyo-Mitsubishi UFJ, LTD.';
@@ -81,7 +81,8 @@ var getAssociatedBank = function(cbu) {
     case 93: return  'Banco de la Pampa Sociedad de Economía Mixta';
     case 94: return  'Banco de Corrientes S.A.';
     case 97: return  'Banco Provincia del Neuquén S.A.';
-    case 143: return 'Banco Interfinanzas S.A.';
+    case 143: return 'Brubank S.A.U.';
+    case 147: return 'Banco Interfinanzas S.A.';
     case 150: return 'HSBC Bank Argentina S.A.';
     case 165: return 'JP Morgan Chase Bank NA (Sucursal Buenos Aires)';
     case 191: return 'Banco Credicoop Cooperativo Limitado';
@@ -118,6 +119,7 @@ var getAssociatedBank = function(cbu) {
     case 339: return 'RCI Banque S.A.';
     case 340: return 'BACS Banco de Crédito y Securitización S.A.';
     case 341: return 'Más Ventas S.A.';
+    case 384: return 'Wilobank S.A.';
     case 386: return 'Nuevo Banco de Entre Ríos S.A.';
     case 389: return 'Banco Columbia S.A.';
     case 405: return 'Ford Credit Compañía Financiera S.A.';
