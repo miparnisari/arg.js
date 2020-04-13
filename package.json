@@ -34,10 +34,10 @@
   },
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-jsdoc3": "^2.0.0",
-    "gulp-mocha": "^6.0.0",
+    "gulp-jsdoc3": "^3.0.0",
+    "gulp-mocha": "^7.0.2",
     "jsdoc": "^3.6.3",
-    "mocha": "^6.1.4",
+    "mocha": "^7.1.1",
     "should": "^13.2.0"
   }
 }
