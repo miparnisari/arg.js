@@ -3,6 +3,9 @@
   "version": "1.1.5",
   "description": "Utility functions for Argentina-related stuff (banks, IDs, phones, etc.)",
   "main": "index.js",
+  "engines": {
+    "node": ">=10"
+  },
   "directories": {
     "test": "test"
   },

@@ -5,6 +5,7 @@ arg.js
 ![build-status](https://travis-ci.org/miparnisari/arg.js.svg?branch=master)
 ![download-count](https://img.shields.io/npm/dm/arg.js.svg)
 ![dev-deps](https://david-dm.org/miparnisari/arg.js.svg)
+[![Known Vulnerabilities](https://snyk.io/test/github/miparnisari/arg.js/badge.svg?targetFile=package.json)](https://snyk.io/test/github/miparnisari/arg.js?targetFile=package.json)
 
 This is a JavaScript library that provides utility functions to do validations of Argentinian's document numbers, identification numbers and phones.
 
