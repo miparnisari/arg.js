@@ -15,7 +15,7 @@ var _isTypeOk = function(cuit) {
 
 var _checksumIsOk = function(sCUIT) {
     if (!sCUIT) return false
-    var sCUIT = String(sCUIT);
+    sCUIT = String(sCUIT);
     var aCUIT = sCUIT.split('');
 
     var aMult = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2];

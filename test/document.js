@@ -1,4 +1,3 @@
-var should = require('should');
 var document = require('../src/document');
 
 describe('Document', function () {
