@@ -1,4 +1,3 @@
-var should  = require('should');
 var cuit = require('../src/cuit');
 
 describe('CUIT / CUIL', function() {

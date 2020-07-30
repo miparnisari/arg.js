@@ -10,7 +10,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "eslint": "npx eslint ."
   },
   "repository": {
     "type": "git",
@@ -33,11 +34,14 @@
     "google-libphonenumber": "^2.0.19"
   },
   "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
     "gulp": "^4.0.2",
     "gulp-jsdoc3": "^3.0.0",
     "gulp-mocha": "^7.0.2",
     "jsdoc": "^3.6.3",
     "mocha": "^7.1.1",
+    "prettier": "2.0.5",
     "should": "^13.2.0"
   }
 }

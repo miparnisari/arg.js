@@ -1,4 +1,3 @@
-var should  = require('should');
 var phone = require('../src/phone');
 
 describe('Phones', function() {
