@@ -30,4 +30,8 @@ describe('CBU', function() {
     cbu.isValid("28505909400904181352012").should.be.exactly(false); //invalid length
     cbu.isValid("2850590940090418135201").should.be.exactly(true);
   });
+
+  it("get account number", function() {
+    cbu.getAccountNumber('2850590940090418135201').should.be.exactly('40090418135201');
+  });
 });
