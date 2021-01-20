@@ -170,12 +170,24 @@ var getBankCode = function(cbu) {
   return parseInt(cbu.substr(0, 3), 10);
 }
 
+/**
+ * @description Returns the account number associated to a given CBU.
+ * @param {string} cbu
+ * @returns {string} account number
+ */
+var getAccountNumber = function (cbu) {
+  if (!cbu) throw new Error("No CBU provided");
+  if (!isValid(cbu)) throw new Error("CBU is not valid");
+  return cbu.substr(8, 14);
+}
+
 module.exports = {
-    _isLengthOk: _isLengthOk,
-    _isValidAccount: _isValidAccount,
-    _isValidBankCode: _isValidBankCode,
-    isValid: isValid,
-    getAssociatedBank: getAssociatedBank,
-    getBankCode: getBankCode,
-    getBranch: getBranch,
+  _isLengthOk: _isLengthOk,
+  _isValidAccount: _isValidAccount,
+  _isValidBankCode: _isValidBankCode,
+  isValid: isValid,
+  getAssociatedBank: getAssociatedBank,
+  getBankCode: getBankCode,
+  getBranch: getBranch,
+  getAccountNumber: getAccountNumber,
 };
